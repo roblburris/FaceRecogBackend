@@ -21,7 +21,7 @@ type Person struct {
 }
 
 func setupMongo() (context.Context, *mongo.Collection) {
-	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb+srv://generic:atjOcCNVrUgySdJv@facial-recognition.t8kbl.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority"))
+	client, err := mongo.NewClient(options.Client().ApplyURI())
 	if err != nil {
 		log.Fatal(err)
 	}
